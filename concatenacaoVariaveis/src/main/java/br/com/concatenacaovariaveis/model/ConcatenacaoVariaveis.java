@@ -3,11 +3,11 @@ package br.com.concatenacaovariaveis.model;
 public class ConcatenacaoVariaveis {
 
     public static void main(String[] args) {
-        float precoCompt = 2100.00f,
-              precoMesa = 650.50F;
-        double codigo = 5290.00F; 
         byte idade = 30;
         char sexo = 'F';
+        float precoCompt = 2100.00f,
+              precoMesa = 650.50F,
+              codigo = 5290.00F; 
         
         System.out.println ("Produtos:");
         System.out.printf ("Computador, o preço é $ %.2f\n", precoCompt);
