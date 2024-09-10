@@ -1,14 +1,14 @@
-package com.mycompany.construtor;
+package br.com.construtorconta;
 
 import Entidade.ContaComum;
+import Entidade.ContaEspecial;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Construtor 
-{
+public class ConstrutorConta {
 
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
+        
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         ContaComum contas;
@@ -22,7 +22,7 @@ public class Construtor
         int numero = sc.nextInt();
 
 
-        System.out.print("Informe se há depósito inicial (y/s): ");
+        System.out.print("Informe se há depósito inicial (y/n): ");
         char resposta = sc.next().charAt(0);
 
         if (resposta == 'y') {
@@ -32,14 +32,7 @@ public class Construtor
 
         } else {
             contas = new ContaComum(numero, titular);
-        }     
-        
-        System.out.print("Sua conta é Conta Comum ou Especial (1/2): ");
-        int tipoConta = sc.nextInt();
-        
-        if () {
-        
-        }
+        }                 
         
         System.out.print(contas);
         System.out.print("Informe o valor do desposito: ");
@@ -53,6 +46,5 @@ public class Construtor
         
         contas.saque(saqueValor);
         System.out.print(contas);
-        
     }
 }
