@@ -62,11 +62,10 @@ public class ConstrutorConta {
         System.out.println(conta);
         
         if (tipoConta == 'y') {
-
-        System.out.print("Informe o valor do empréstimo, se aplicável: ");
-        double emprestimoValor = sc.nextDouble();
-        conta.realizarEmprestimo(emprestimoValor);
-        System.out.println(conta);
+            System.out.print("Informe o valor do empréstimo, se aplicável: ");
+            double emprestimoValor = sc.nextDouble();
+            conta.realizarEmprestimo(emprestimoValor);
+            System.out.println(conta);
         }
 
         sc.close();
