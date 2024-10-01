@@ -1,0 +1,5 @@
+entidade\Produto.class
+entidade\ProdutoNormal.class
+entidade\ProdutoImportado.class
+app\AppAtividade.class
+entidade\ProdutoUsado.class
