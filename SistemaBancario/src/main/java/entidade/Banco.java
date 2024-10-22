@@ -4,7 +4,7 @@ package entidade;
 
 public interface Banco 
 {
-    // Interface com método de modalidades de transações 
+    // Target - Interface com método de modalidades de transações 
     
     void depositar(float quantia);
     void sacar(float quantia);

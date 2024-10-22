@@ -4,7 +4,7 @@ package entidade;
 
 public class AdapterBancoLegado implements Banco
 {
-    // Estabelecendo acesso ao Banco Legado
+    // Adapter - Estabelecendo acesso ao Banco Legado
     
     private BancoLegado bancoLegado;
     

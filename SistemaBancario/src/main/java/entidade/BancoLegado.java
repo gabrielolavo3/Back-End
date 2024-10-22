@@ -4,7 +4,7 @@ package entidade;
 
 public class BancoLegado 
 {
-    // Class que simula banco legado
+    // Adaptee - Class que simula banco legado
     
     private float saldo;
     
