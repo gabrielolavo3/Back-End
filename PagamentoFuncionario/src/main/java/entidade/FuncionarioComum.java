@@ -1,5 +1,3 @@
-// By: Gabriel S.Olavo | Software Developer
-
 package entidade;
 
 public class FuncionarioComum extends Funcionario
@@ -20,9 +18,9 @@ public class FuncionarioComum extends Funcionario
     {
         float pagamentoFinal = pagamento();
         
-        return "\nNome do funcionaário: " + nome
+        return "Nome do funcionaário" + nome
                 + "\nHora trabalhadas: " + horaTrabalhada
-                + "\nValor da hora trabalhada: R$ " + String.format("%.2f", valorHora)
-                + "\nPagamento final: R$ " + String.format("%.2f", pagamentoFinal);
+                + "\nValor da hora trabalhada: R$" + String.format("%.2f", valorHora)
+                + "\nPagamento final: " + String.format("%.2f", pagamentoFinal);
     }
 }

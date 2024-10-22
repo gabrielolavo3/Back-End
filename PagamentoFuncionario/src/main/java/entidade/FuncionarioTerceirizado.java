@@ -1,24 +1,21 @@
-// By: Gabriel S.Olavo | Software Developer
-
 package entidade;
 
 public class FuncionarioTerceirizado extends FuncionarioComum
 {
-    private int bonus = 110;
+    private float bonus = 1.1f;
     private float despesaAdicional;
     
-    public FuncionarioTerceirizado(String nome, int horaTrabalhada, float valorHora, float despesaAdicional)
+    public FuncionarioTerceirizado(String nome, int horaTrabalhada, float valorHora, int bonus, float despesaAdicional)
     {
-        super(nome, horaTrabalhada, valorHora);        
+        super(nome, horaTrabalhada, valorHora);
+        this.bonus = bonus;
         this.despesaAdicional = despesaAdicional;
     }
     
     @Override
     public float pagamento()
     {
-        float salario = horaTrabalhada * valorHora,
-              acrescimo = despesaAdicional + (bonus * despesaAdicional);
-        return salario + acrescimo;
+        return (horaTrabalhada * valorHora) + (despesaAdicional * bonus);       
     }
     
     @Override
@@ -26,10 +23,9 @@ public class FuncionarioTerceirizado extends FuncionarioComum
     {
         float pagamentoFinal = pagamento();
         
-        return "\nNome do funcionaário: " + nome
+        return "Nome do funcionaário" + nome
                 + "\nHora trabalhadas: " + horaTrabalhada
-                + "\nValor da hora trabalhada: R$ " + String.format("%.2f", valorHora)
-                + "\nPagamento final: R$ " + String.format("%.2f", pagamentoFinal);
+                + "\nValor da hora trabalhada: R$" + String.format("%.2f", valorHora)
+                + "\nPagamento final: " + String.format("%.2f", pagamentoFinal);
     }
 }
-

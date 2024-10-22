@@ -1,4 +1,3 @@
-// By: Gabriel S.Olavo | Software Developer
 
 package entidade;
 
@@ -13,9 +12,12 @@ public abstract class Funcionario
         this.nome = nome;
         this.horaTrabalhada = horaTrabalhada;
         this.valorHora = valorHora;
-    }        
+    }
     
-    public abstract float pagamento();
+    public float pagamento()
+    {
+        return horaTrabalhada * valorHora;
+    }
     
     public abstract String toString();
 }
