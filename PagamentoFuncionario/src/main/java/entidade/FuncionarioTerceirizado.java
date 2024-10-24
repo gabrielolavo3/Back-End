@@ -2,9 +2,9 @@
 
 package entidade;
 
-public class FuncionarioTerceirizado extends FuncionarioComum
+public class FuncionarioTerceirizado extends Funcionario
 {
-    private int bonus = 110;
+    private float bonus = 1.10f; // Valor equivale a 110
     private float despesaAdicional;
     
     public FuncionarioTerceirizado(String nome, int horaTrabalhada, float valorHora, float despesaAdicional)
@@ -18,11 +18,11 @@ public class FuncionarioTerceirizado extends FuncionarioComum
     {
         float salario = horaTrabalhada * valorHora,
               acrescimo = despesaAdicional * bonus;
-        return salario + acrescimo;       
+        return salario + acrescimo;
     }
     
     @Override
-    public String toString()
+    public String exibirDados()
     {
         float pagamentoFinal = pagamento();
         
@@ -32,6 +32,3 @@ public class FuncionarioTerceirizado extends FuncionarioComum
                 + "\nPagamento final: R$ " + String.format("%.2f", pagamentoFinal);
     }
 }
-
-
-

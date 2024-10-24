@@ -16,7 +16,7 @@ public class FuncionarioComum extends Funcionario
     }
     
     @Override
-    public String toString()
+    public String exibirDados()
     {
         float pagamentoFinal = pagamento();
         
@@ -26,4 +26,3 @@ public class FuncionarioComum extends Funcionario
                 + "\nPagamento final: R$ " + String.format("%.2f", pagamentoFinal);
     }
 }
-

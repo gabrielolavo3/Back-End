@@ -15,11 +15,6 @@ public abstract class Funcionario
         this.valorHora = valorHora;
     }
     
-    public float pagamento()
-    {
-        return horaTrabalhada * valorHora;
-    }
-    
-    public abstract String toString();
+    public abstract float pagamento();    
+    public abstract String exibirDados();
 }
-
