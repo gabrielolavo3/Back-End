@@ -1,4 +1,3 @@
-
 // Dev: Gabriel S. Olavo
 
 package classes;
@@ -23,7 +22,7 @@ public class Livro extends ItemBiblioteca
     public int getNumeroPagina()
     {
         return numeroPagina;
-    }
+    }   
     
     @Override
     public String exibirDetalhes()

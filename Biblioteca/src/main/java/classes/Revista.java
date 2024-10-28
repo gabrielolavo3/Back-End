@@ -22,7 +22,7 @@ public class Revista extends ItemBiblioteca
     public short getEdicao()
     {
         return edicao;
-    }
+    }    
   
     @Override
     public String exibirDetalhes()

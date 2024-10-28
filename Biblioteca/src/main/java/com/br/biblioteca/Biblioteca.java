@@ -93,8 +93,8 @@ public class Biblioteca
         for (ItemBiblioteca bibli : biblioteca)
         {
             System.out.println(bibli.exibirDetalhes());
-        }   
+        }                 
         
-        System.out.println("\nTotal de páginas dos livros: " + totalDePagina);
+        System.out.println("\nTotal de páginas dos livros: " + totalDePagina);                                
     }
 }
