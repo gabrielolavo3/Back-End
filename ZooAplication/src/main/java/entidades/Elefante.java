@@ -1,18 +1,18 @@
-
 package entidades;
 
-public class Leao extends Animal{
-    public Leao(String nome, String tipo, String habitat) {
+public class Elefante extends Animal{
+    public Elefante(String nome, String tipo, String habitat){
         super(nome, tipo, habitat);
     }
-
+    
     @Override
-    public String emitirSom() {
-        return String.format("Roar");
+    public String emitirSom(){
+        return String.format("Fumm Uuuuh");
     }
     
     @Override
     public String exibirDados(){        
         return String.format("\nNome: %s\nTipo: %s\nHabitat: %s", nome, tipo, habitat);
     }
+
 }

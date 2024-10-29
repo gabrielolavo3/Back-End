@@ -1,4 +1,3 @@
-
 package entidades;
 
 public abstract class Animal {
@@ -25,4 +24,5 @@ public abstract class Animal {
     
     public abstract String emitirSom();
     public abstract String exibirDados();
+
 }

@@ -1,6 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+// Devs: Camile Oliveira e Gabriel Olavo
+// Data de implemantação: 29.10.24
 
 package com.br.zooaplication;
 
@@ -12,7 +11,6 @@ import java.util.ArrayList;
 public class ZooAplication {
 
     public static void main(String[] args) {
-        
         Scanner sc = new Scanner(System.in);
         List<Animal> animais = new ArrayList<>();
         
@@ -27,42 +25,48 @@ public class ZooAplication {
             System.out.print("Digite qual é o habitat do animal: ");
             String habitat = sc.nextLine();
 
-            System.out.println("Animais Disponíveis para Cadastro");
+            System.out.println("\nAnimais Disponíveis para Cadastro");
             System.out.println("1 - Leão");
             System.out.println("2 - Elefante");
             System.out.println("3 - Papagaio");
             System.out.println("4 - Sair e exibir dados");
             System.out.print("Escolha uma opção: ");
-            int opcao = sc.nextInt();            
-        
+            int opcao = sc.nextInt(); 
+            sc.nextLine();
+            
+            // Passando as informações para o ArrayList
+            
             switch (opcao){
                 case 1 -> animais.add (new Leao(nome, tipo, habitat));               
                 case 2 -> animais.add (new Elefante(nome, tipo, habitat));                
-                case 3 -> animais.add (new Papagaio(nome, tipo, habitat));                
-                default -> {
-                    System.out.println("Opção inválida! Selecione uma opção do menu");
+                case 3 -> animais.add (new Papagaio(nome, tipo, habitat)); 
+                case 4 -> {
+                    System.out.println("Carregando lista atualizada");
+                    break;
                 }                
-           }
+            }
+
+            if (opcao == 4){
+               break;
+            }
             
-           if (opcao == 4){
-               break;
-           }
-           
-           System.out.print("Deseja cadastrar outro animal (Sim/ Não): ");
-           String cadastro = sc.nextLine();
-           
-           if (cadastro.equalsIgnoreCase("Sim")){
-               continue;
-           
-           } else if (cadastro.equalsIgnoreCase("Não")){
-               break;
-           }            
+            // Lógica para interromper ou reiniciar o laço
+            
+            System.out.print("\nDeseja cadastrar outro animal (Sim/ Não): ");
+            String cadastro = sc.nextLine();
+
+            if (cadastro.equalsIgnoreCase("Sim")){
+                continue;
+
+            } else if (cadastro.equalsIgnoreCase("Não")){
+                break;
+            }            
         } 
-        
-        System.out.println("Lista de Animais Cadastrados");
-        for (Animal anim : animais){
-            System.out.println(anim.exibirDados());
-            System.out.println(anim.emitirSom());
-        }
+
+         System.out.println("\nLista de Animais Cadastrados");
+         for (Animal anim : animais){
+             System.out.println(anim.exibirDados());
+             System.out.println(anim.emitirSom());
+         }
     }
 }

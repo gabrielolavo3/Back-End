@@ -1,7 +1,6 @@
-
 package entidades;
 
-public class Papagaio extends Animal {
+public class Papagaio extends Animal{
     public Papagaio(String nome, String tipo, String habitat) {
         super(nome, tipo, habitat);
     }
@@ -15,4 +14,5 @@ public class Papagaio extends Animal {
     public String exibirDados(){        
         return String.format("\nNome: %s\nTipo: %s\nHabitat: %s", nome, tipo, habitat);
     }    
+
 }
